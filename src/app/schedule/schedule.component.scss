@@ -1,0 +1,11 @@
+$fondo: #768d4a;
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 36px;
+    color: $fondo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}

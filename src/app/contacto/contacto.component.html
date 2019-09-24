@@ -1,0 +1,17 @@
+<app-menu></app-menu>
+
+<div class="contacto">
+    <p>C O N T A C T O</p>
+
+
+    <div [formGroup]="messageForm">
+            <input type="text" placeholder="Nro de empleado" formControlName="name">
+            <input type="text" placeholder="Asunto" formControlName="subject">
+            <input type="text" placeholder="name@chickenfarm.com" formControlName="email">
+            <textarea formControlName="message"></textarea>
+
+
+            <p-button label="Enviar" type="button" styleClass="ui-button-success ui-button-rounded"></p-button>
+    </div>
+
+</div>

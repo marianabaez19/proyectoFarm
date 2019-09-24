@@ -1,0 +1,86 @@
+$fondo: #768d4a;
+$fondoclaro: #f7f5f1;
+$titulo: #d8df99;
+$footer: #f7f5f1;
+
+
+
+@media only screen and (max-width: 460px){
+    /*nav{
+        display: none;
+    }*/
+    p-tabMenu{
+        display: none;
+    }
+}
+
+/*@media only screen and (min-width: 768px) {
+        nav{
+            flex-direction: row;
+            font-family: Arial, Helvetica, sans-serif;
+            float: left;
+            height: 75px;
+            width: 60%;
+            background-color: $fondo;
+   
+            ul{
+                display: flex;
+                justify-content: center;
+                li{
+                    height: 75px;
+                    width: 150px;
+                    list-style-type: none;
+                    text-align: center;
+                    display: inline-block;
+                    &:hover{
+                        background-color: #568500;
+                    }                       
+                a{  
+                    text-decoration: none;
+                    color: $footer;
+                    width: 150px;
+                    height: 75px;
+                    margin-top: 19%;
+                    display: inline-block;           
+                    }
+                }
+               
+            }
+           
+        } 
+
+}*/
+
+@media only screen and (min-width: 992px) {  
+         nav{
+             float: left;
+             height: 75px;
+             width: 60%;
+             background-color: $fondo;    
+             ul{
+                 display: flex;
+                 justify-content: center;
+                 li{
+                     height: 75px;
+                     width: 150px;
+                     list-style-type: none;
+                     text-align: center;
+                     display: inline-block;
+                     &:hover{
+                         background-color: #568500;
+                     }                       
+                 a{  
+                     text-decoration: none;
+                     color: $footer;
+                     width: 150px;
+                     height: 75px;
+                     margin-top: 19%;
+                     display: inline-block;           
+                     }
+                 }
+                
+             }
+            
+         }
+ }
+
