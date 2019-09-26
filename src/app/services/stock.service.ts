@@ -1,11 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Stock } from './stock';
-import { Schedule } from "./schedule";
+import { Stock } from '../models/stock.model';
+import { Schedule } from "../models/schedule.model";
 import { BehaviorSubject, Observable } from 'rxjs';
-import { STOCK } from "../app/mock-stock";
-import { SCHEDULE } from "../app/mock-schedule"
+import { STOCK } from "../mock/mock-stock";
+import { SCHEDULE } from "../mock/mock-schedule"
   
 @Injectable({providedIn: 'root'})
 export class StockService {

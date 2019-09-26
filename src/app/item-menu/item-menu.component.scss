@@ -2,19 +2,9 @@ $fondoclaro: #fcfcfc;
 $titulo: #d8df99;
 $fondo: #768d4a;
 $nuevo: #91532b;
-$detail: #912b56;
+$detail: #912b56; 
 
-h2{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    padding: 2%;
-    font-size: 36px;
-    color: $fondo;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif; 
-    
-} 
+
 div{
     background-color: $fondoclaro;
     width: 100%;
@@ -29,7 +19,7 @@ a.ancla {
     text-align: left;
     font-size: 28px;
     color: $nuevo;
-    padding: 27px 0% 0% 4%;
+    padding: 27px 0% 0% 4%; 
     margin: 5% 0% 7% 0%;
     border-left: solid;
     border-color: $nuevo;
@@ -49,7 +39,6 @@ a.ancla {
         display: flex;
         justify-content: center;
         width: 100%;
-
     }
     .contenedor-anclas {
         display: flex;
@@ -64,9 +53,3 @@ a.ancla {
         border-color: $fondo;
     }
 }
-
-@media screen and (max-width:900px){
-    
-}
-
-

@@ -15,19 +15,14 @@ export class MenuComponent implements OnInit {
 
 
   constructor(
-    private router: Router) {      
-      
-    }
-  
+    /* private router: Router*/ ) { }  
 
   ngOnInit() {
     this.items = [
-      {label: 'Inicio', icon: 'fa fa-fw fa-bar-chart', routerLink: ['inicio']},
-      {label: 'Stock', icon: 'fa fa-fw fa-book', routerLink: ['stock']},
-      {label: 'Productos', icon: 'fa fa-fw fa-support', routerLink: ['productos']},
-      {label: 'Cronograma', icon: 'fa fa-fw fa-book', routerLink: ['schedule']},
-      {label: 'Consulta', icon: 'fa fa-fw fa-twitter', routerLink: ['contacto']}
-
-  ];
+      {label: 'Stock', icon: 'fa fa-fw fa-book', routerLink: ['/stock']},
+      {label: 'Productos', icon: 'fa fa-fw fa-support', routerLink: ['/productos']},
+      {label: 'Cronograma', icon: 'fa fa-fw fa-book', routerLink: ['/schedule']},
+      {label: 'Consulta', icon: 'fa fa-fw fa-twitter', routerLink: ['/contacto']}
+    ];
   }
 }

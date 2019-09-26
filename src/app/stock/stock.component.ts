@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Stock } from '../stock';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Stock } from '../models/stock.model';
 import { StockService } from '../services/stock.service';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { SelectItem } from 'primeng/api';
@@ -10,12 +10,12 @@ import { takeUntil } from "rxjs/operators";
 @Component({
   selector: 'app-stock',
   templateUrl: './stock.component.html',
-  styleUrls: ['./stock.component.scss'],
+  styleUrls: ['./stock.component.scss'], 
   providers: [StockService]
 })
 
-export class StockComponent implements OnInit {
-
+export class StockComponent implements OnInit, OnDestroy {
+  
   stock: Stock[];
   cols: any[];
   newStock: Stock;
@@ -31,7 +31,7 @@ export class StockComponent implements OnInit {
     private stockService: StockService,
     private formBuilder: FormBuilder) {
       this.ngUnsubscribe = new Subject<void>();
-  }
+    }
 
   ngOnInit() {
     this.stockService.getStock().pipe(takeUntil(this.ngUnsubscribe)).subscribe(stock => this.stock = stock)
@@ -44,11 +44,16 @@ export class StockComponent implements OnInit {
     ],
     this.items = [
       {label: 'Inicio', icon: 'fa fa-fw fa-bar-chart', routerLink: ['inicio']},
-      {label: 'Stock', icon: 'fa fa-fw fa-book', routerLink: ['stock']},
       {label: 'Productos', icon: 'fa fa-fw fa-support', routerLink: ['productos']},
+      {label: 'Stock', icon: 'fa fa-fw fa-book', routerLink: ['stock']},
+      {label: 'Cronograma', icon: 'fa fa-fw fa-book', routerLink: ['schedule']},
       {label: 'Contacto', icon: 'fa fa-fw fa-twitter', routerLink: ['contacto']}
   ];
   this.activeItem = this.items[2];
+  }
+  ngOnDestroy(): void {
+    this.ngUnsubscribe.next(); 
+    this.ngUnsubscribe.complete();
   }
 
   // DROPDOWN
@@ -74,10 +79,8 @@ export class StockComponent implements OnInit {
     let stockAux = this.stock
     this.stock = stockAux.filter( element => element.id != id);
   }
-
-  editStock(stock: any){
-    
-  }
+  //EDIT
+  editStock(stock: any){ }
 
   //SAVE
   save(): void {
@@ -100,7 +103,6 @@ export class StockComponent implements OnInit {
     return Object.keys(this.stockForm.get(formControlName).errors)[0];
   }
 
-  onSubmit() { }
 
 }
  

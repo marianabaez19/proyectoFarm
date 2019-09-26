@@ -1,4 +1,4 @@
-import { Schedule } from './schedule';
+import { Schedule } from '../models/schedule.model';
 
 export const SCHEDULE: Schedule[] =[
     { id:1, task:'Alimentar gallinas', time:'7hs', employee:'Empleado 01'},

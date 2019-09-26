@@ -24,17 +24,16 @@
                         <p-button class="boton_tabla" label="Eliminar" type="button" (onClick)="deleteStock(stock)" styleClass="ui-button-danger ui-button-rounded"></p-button>
                     </td>
                 </tr>
-
             </ng-template>
-        </p-table>
+    </p-table>
 
-        <div [formGroup]="stockForm"> 
-                <p-dropdown [options]="products" formControlName="name" placeholder="Productos"></p-dropdown>
-                <input type="text" pInputText placeholder="Tipo" formControlName="color">
-                <input type="text" pInputText placeholder="Cantidad" formControlName="cant">
-                <div *ngIf="hasError('name', 'tipo', 'cant')">
-                    {{showRequiredMessage()}}
-                </div>
+    <div [formGroup]="stockForm"> 
+           <p-dropdown [options]="products" formControlName="name" placeholder="Productos"></p-dropdown>
+            <input type="text" pInputText placeholder="Tipo" formControlName="color">
+            <input type="text" pInputText placeholder="Cantidad" formControlName="cant">
+            <div *ngIf="hasError('name', 'tipo', 'cant')">
+                {{showRequiredMessage()}}
+            </div>
 
-                <p-button label="Guardar" type="button" (onClick)="save()" styleClass="ui-button-success ui-button-rounded"></p-button>
-        </div>
+            <p-button label="Guardar" type="button" (onClick)="save()" styleClass="ui-button-success ui-button-rounded"></p-button>
+    </div>

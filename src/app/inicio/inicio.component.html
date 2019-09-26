@@ -1,20 +1,16 @@
 <div>
-    <h2>Administración</h2>
+    <h2>A D M I N I S T R A C I Ó N</h2>
+    <app-item-menu *ngFor="let item of items,let i=index" [item]="item" [paths]="paths[i]"></app-item-menu>
 
-    <div class="contenedor-anclas">
-<!--         <div class="p-col">
-            <p>STOCK</p>
+    <!--<div class="contenedor-anclas">
+        <div class="links">    
+            <a (click)="setRoute('/productos')" class="ancla">Productos</a>
+            <a (click)="setRoute('/stock')" class="ancla">Stock</a>
         </div>
-        <div class="p-col">
-            <p>ALIMENTOS</p>
+        <div class="links">
+            <a (click)="setRoute('/schedule')" class="ancla">Cronograma</a>
+            <a (click)="setRoute('/contacto')" class="ancla">Contacto</a>
         </div>
-        <div class="p-col">
-            <p>VENTAS</p>
-        </div> -->
-        <a href="/productos" class="ancla">PRODUCTOS</a>
-        <a href="/stock" class="ancla">STOCK</a>
-        <a href="/schedule" class="ancla">CRONOGRAMA</a>
-        <a href="/contacto" class="ancla">CONTACTO</a>
-    </div>
+    </div>-->
 </div>
 

@@ -26,6 +26,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { AppRoutingModule } from './app-routing.module';
 import { StockComponent } from './stock/stock.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { ItemMenuComponent } from './item-menu/item-menu.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
     ProductosComponent,
     ContactoComponent,
     StockComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    ItemMenuComponent
   ],
   imports: [
     HttpClientModule,

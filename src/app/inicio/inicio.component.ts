@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ITEMS } from '../mock/mock-items'
+
 
 @Component({
   selector: 'app-inicio',
@@ -7,9 +10,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  items = ITEMS;
+  paths : string[];
+
+  constructor(private router: Router) {
+    this.paths = ['productos', 'stock', 'schedule', 'contacto']
+    
+   }
 
   ngOnInit() {
   }
 
+  /*setRoute(value:string) {
+    this.router.navigate([value]);
+  }*/
 }

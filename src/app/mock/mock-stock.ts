@@ -1,4 +1,4 @@
-import { Stock } from './stock';
+import { Stock } from '../models/stock.model';
 
 export const STOCK: Stock[]=[
     {id: 1, name: 'Huevos', tipo: 'Blancos', cant: 410},

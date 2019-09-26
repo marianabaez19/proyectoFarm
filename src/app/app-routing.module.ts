@@ -8,18 +8,30 @@ import { ScheduleComponent } from './schedule/schedule.component';
 
 
 const routes: Routes = [
-    { path: '', redirectTo: 'inicio', pathMatch:'full'},
-    { path: 'inicio', component: InicioComponent},
-    { path: 'stock', component: StockComponent},
-    { path: 'productos', component: ProductosComponent},
-    { path: 'contacto', component: ContactoComponent },
-    { path: 'schedule', component: ScheduleComponent}    
-]
+    {
+        path: 'stock', component: StockComponent
+    }, 
+    {
+        path: 'productos', component: ProductosComponent
+    },
+    { 
+        path: 'contacto', component: ContactoComponent 
+    },
+    { 
+        path: 'schedule', component: ScheduleComponent
+    },
+    { 
+        path: '', 
+        component: InicioComponent,
+        pathMatch: "full"
+    }
+    
+];
 
 @NgModule({
     imports:[
         RouterModule.forRoot(
-            routes,{enableTracing:true}
+            routes
         )
     ],
     exports: [RouterModule]
