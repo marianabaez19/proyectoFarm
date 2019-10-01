@@ -1,6 +1,6 @@
 <app-menu></app-menu>
 
-<p>S T O C K</p>
+<h2>S T O C K</h2>
 
     <p-table [value]="stock">
             <ng-template pTemplate="header">
@@ -18,10 +18,16 @@
                     <td *ngFor="let col of cols,i">
                         {{stock[col.field]}}
                     </td>
-                    <td>
-                        <p-button class="boton_tabla" label="Editar" type="button" (onClick)="editStock()" styleClass="ui-button-success ui-button-rounded"></p-button>
+                    <td class="boton-grande">
+                        <p-button class="boton_tabla" class="fa-book" label="Editar" type="button" (onClick)="editStock()" styleClass="ui-button-success ui-button-rounded"></p-button>
 
                         <p-button class="boton_tabla" label="Eliminar" type="button" (onClick)="deleteStock(stock)" styleClass="ui-button-danger ui-button-rounded"></p-button>
+                    </td>
+
+                    <td class="boton-chico">
+                        <p-button class="boton_tabla" label="E" type="button" (onClick)="editStock()" styleClass="ui-button-success ui-button-rounded"></p-button>
+
+                        <p-button class="boton_tabla" label="D" type="button" (onClick)="deleteStock(stock)" styleClass="ui-button-danger ui-button-rounded"></p-button>
                     </td>
                 </tr>
             </ng-template>
@@ -35,5 +41,5 @@
                 {{showRequiredMessage()}}
             </div>
 
-            <p-button label="Guardar" type="button" (onClick)="save()" styleClass="ui-button-success ui-button-rounded"></p-button>
+            <p-button label="Guardar" type="button" (onClick)="save()" styleClass="ui-button-warning ui-button-rounded"></p-button>
     </div>

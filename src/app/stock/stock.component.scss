@@ -1,8 +1,8 @@
 $fondo: #768d4a;
 $fondoclaro: #f7f5f1;
 
-
-p{
+h2{
+    font-weight: normal;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 36px;
     color: $fondo;
@@ -28,6 +28,13 @@ p-dropdown{
     margin-left: 5%;
 }
 
-@media screen and (max-width: 500px){
-    
+@media screen and (max-width: 791px){
+    .boton-grande{
+        display: none;
+    }
+}
+@media screen and (min-width: 791px){
+    .boton-chico{
+        display: none;
+    }
 }

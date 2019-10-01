@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -14,15 +13,14 @@ export class MenuComponent implements OnInit {
   activeItem: MenuItem;
 
 
-  constructor(
-    /* private router: Router*/ ) { }  
+  constructor( ) { }  
 
   ngOnInit() {
     this.items = [
-      {label: 'Stock', icon: 'fa fa-fw fa-book', routerLink: ['/stock']},
-      {label: 'Productos', icon: 'fa fa-fw fa-support', routerLink: ['/productos']},
-      {label: 'Cronograma', icon: 'fa fa-fw fa-book', routerLink: ['/schedule']},
-      {label: 'Consulta', icon: 'fa fa-fw fa-twitter', routerLink: ['/contacto']}
+      {label: 'Productos', icon: 'fa fa-fw fa-th', routerLink: ['/productos']},
+      {label: 'Stock', icon: 'fa fa-fw fa-cubes', routerLink: ['/stock']},
+      {label: 'Cronograma', icon: 'fa fa-fw fa-calendar', routerLink: ['/schedule']},
+      {label: 'Consulta', icon: 'fa fa-fw fa-paper-plane', routerLink: ['/contacto']}
     ];
   }
 }

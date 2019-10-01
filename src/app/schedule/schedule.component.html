@@ -1,20 +1,20 @@
 <app-menu></app-menu>
 
-<p>C R O N O G R A M A</p>
+<h2>C R O N O G R A M A</h2>
 
 <p-table [value]="schedule">
-        <ng-template pTemplate="header">
-            <tr>
-                <th *ngFor="let col of cols">
-                    {{col.header}}
-                </th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-schedule>
-            <tr>
-                <td *ngFor="let col of cols">
-                    {{schedule[col.field]}}
-                </td>
-            </tr>
-        </ng-template>
-    </p-table>
+    <ng-template pTemplate="header">
+        <tr>
+            <th *ngFor="let col of cols">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-schedule>
+        <tr>
+            <td *ngFor="let col of cols">
+                {{schedule[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
